@@ -2,17 +2,51 @@
 //  AppDelegate.m
 //  DESDemo
 //
-//  Created by Admin on 13-7-23.
-//  Copyright (c) 2013年 Admin. All rights reserved.
+//  Created by tekuba.net on 13-7-23.
+//  Copyright (c) 2013年 tekuba.net. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "DES.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    //This is a demo edited by www.tekuba.net
+    //DES CBC mode test
+    NSLog(@"DES CBC mode test");
+    NSString *keyString = @"tekubanet";//8 bytes are valid
+    Byte srcBytes[1024] = {'1','2','3','4','5','6','7','8','9','0','A','B','C','D','E','F'};
+    Byte *encryptBytes = [DES encryptDES:srcBytes key:keyString useEBCmode:NO];
+    
+    NSLog(@"encryptBytes = ");
+    for(int i = 0 ;i < strlen((const char *)encryptBytes);i++)
+    {
+        NSLog(@"%c",encryptBytes[i]);
+    }
+
+    Byte *decryptBytes = [DES decryptDES:encryptBytes key:keyString useEBCmode:NO];
+    NSLog(@"decryptBytes = %@",[NSString stringWithUTF8String:(const char*)decryptBytes]);
+    free(encryptBytes);
+    free(decryptBytes);
+    
+    //DES EBC mode test
+//    NSLog(@"DES EBC mode test");
+//    NSString *keyString = @"tekubanet";//8 bytes are valid
+//    Byte srcBytes[1024] = {'1','2','3','4','5','6','7','8','9','0','A','B','C','D','E','F'};
+//    Byte *encryptBytes = [DES encryptDES:srcBytes key:keyString useEBCmode:YES];
+//    
+//    NSLog(@"encryptBytes = ");
+//    for(int i = 0 ;i < strlen((const char *)encryptBytes);i++)
+//    {
+//        NSLog(@"%c",encryptBytes[i]);
+//    }
+//    
+//    Byte *decryptBytes = [DES decryptDES:encryptBytes key:keyString useEBCmode:YES];
+//    NSLog(@"decryptBytes = %@",[NSString stringWithUTF8String:(const char*)decryptBytes]);
+//    free(encryptBytes);
+//    free(decryptBytes);
     return YES;
 }
 							

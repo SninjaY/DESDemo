@@ -24,6 +24,7 @@
 		84F32796179E1AEF0081B8BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F3276E179E1AEF0081B8BC /* Foundation.framework */; };
 		84F3279E179E1AEF0081B8BC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84F3279C179E1AEF0081B8BC /* InfoPlist.strings */; };
 		84F327A1179E1AEF0081B8BC /* DESDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F327A0179E1AEF0081B8BC /* DESDemoTests.m */; };
+		84F327AC179E1B390081B8BC /* DES.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F327AB179E1B390081B8BC /* DES.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		84F3279D179E1AEF0081B8BC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		84F3279F179E1AEF0081B8BC /* DESDemoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DESDemoTests.h; sourceTree = "<group>"; };
 		84F327A0179E1AEF0081B8BC /* DESDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DESDemoTests.m; sourceTree = "<group>"; };
+		84F327AA179E1B390081B8BC /* DES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DES.h; sourceTree = "<group>"; };
+		84F327AB179E1B390081B8BC /* DES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DES.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +129,8 @@
 				84F3278A179E1AEF0081B8BC /* ViewController.h */,
 				84F3278B179E1AEF0081B8BC /* ViewController.m */,
 				84F32773179E1AEF0081B8BC /* Supporting Files */,
+				84F327AA179E1B390081B8BC /* DES.h */,
+				84F327AB179E1B390081B8BC /* DES.m */,
 			);
 			path = DESDemo;
 			sourceTree = "<group>";
@@ -277,6 +282,7 @@
 				84F32779179E1AEF0081B8BC /* main.m in Sources */,
 				84F3277D179E1AEF0081B8BC /* AppDelegate.m in Sources */,
 				84F3278C179E1AEF0081B8BC /* ViewController.m in Sources */,
+				84F327AC179E1B390081B8BC /* DES.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
